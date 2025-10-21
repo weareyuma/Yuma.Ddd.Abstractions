@@ -143,7 +143,7 @@ file class BuildDefinition : NukeBuild
 
 	[NotNull]
 	Target PreviewFeedSetup => td => td.Unlisted()
-		.Description("Set PushApiUrl/PushApiKey for Azure Artifacts Feed when on feature branch.")
+		.Description("Set PushApiUrl/PushApiKey for preview NuGet package feed when on feature branch.")
 		.OnlyWhenStatic(() => GitRepository.IsOnFeatureBranch())
 		.Requires(() => YumaPreviewFeedUrl)
 		.Executes(() => {
@@ -153,7 +153,7 @@ file class BuildDefinition : NukeBuild
 
 	[NotNull]
 	Target ReleaseFeedSetup => td => td.Unlisted()
-		.Description("Set PushApiUrl/PushApiKey for nuget.org when on main branch.")
+		.Description("Set PushApiUrl/PushApiKey for release NuGet package feed when on feature branch.")
 		.OnlyWhenStatic(() => GitRepository.IsOnMainBranch())
 		.Requires(() => Configuration.Equals(Configuration.Release))
 		.Requires(() => YumaReleaseFeedApiKey)

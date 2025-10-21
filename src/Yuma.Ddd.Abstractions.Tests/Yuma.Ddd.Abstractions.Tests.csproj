@@ -19,9 +19,11 @@
       <PackageReference Include="FluentAssertions"/>
       <PackageReference Include="Microsoft.NET.Test.Sdk"/>
       <PackageReference Include="Moq"/>
+      <PackageReference Include="NodaTime"/>
       <PackageReference Include="xunit"/>
       <PackageReference Include="xunit.analyzers"/>
       <PackageReference Include="xunit.runner.visualstudio"/>
+      <PackageReference Include="Yuma.Unit"/>
    </ItemGroup>
 
 </Project>
