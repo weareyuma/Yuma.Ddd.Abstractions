@@ -71,7 +71,8 @@ file class BuildDefinition : NukeBuild
 	});
 
 	[NotNull]
-	Target AuthenticateGitHubPackageSources => td => td.OnlyWhenStatic(() => IsServerBuild)
+	Target AuthenticateGitHubPackageSources => td => td.Unlisted()
+		.OnlyWhenStatic(() => IsServerBuild)
 		.Requires(() => YumaPreviewFeedApiKey)
 		.Executes(() => {
 			var userName = EnvironmentInfo.GetVariable("GITHUB_ACTOR") ?? Environment.UserName ?? "github-actions";
