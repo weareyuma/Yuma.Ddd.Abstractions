@@ -45,6 +45,7 @@ jobs:
         run: ./build.cmd CI
         env:
           YumaReleaseFeedApiKey: ${{ secrets.YUMA_RELEASE_FEED_API_KEY }}
+          YumaPreviewFeedApiKey: ${{ secrets.YUMA_PREVIEW_FEED_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Publish: nuget-packages'
         uses: actions/upload-artifact@v4
