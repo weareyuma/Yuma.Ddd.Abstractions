@@ -10,7 +10,7 @@
 
 ## Overview
 
-Yuma's Distributed Application Libraries: Domain-Driven Design Basic Abstractions
+Yuma's Distributed Application Libraries: Domain-Driven Design Basic Abstractions.
 
 <!-- GitHub Actions Workflow + Badge -->
 
